@@ -1,0 +1,12 @@
+{
+  "name": "exco-geovista-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "python -m http.server 5173",
+    "preview": "python -m http.server 4173 --directory dist"
+  },
+  "engines": { "node": ">=20" }
+}

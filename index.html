@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
+  <meta name="description" content="EXCO GEOVISTA provides drone-based survey solutions for mining operations and geological surveys, including aerial mapping, 3D terrain modelling, geological mapping, highwall surveys and volumetric analysis." />
+  <link rel="icon" type="image/png" href="/media/favicon.png" />
+  <link rel="preload" as="image" href="/media/hero.webp" />
+  <link rel="stylesheet" href="/site.css?v=9" />
+  <title>EXCO GEOVISTA | Drone Survey Solutions for Mining & Geology</title>
+</head>
+<body>
+  <!-- Hairline top scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Precision vertical depth/elevation gauge rail -->
+  <div class="depth-gauge" id="depthGauge" aria-hidden="true">
+    <span class="depth-gauge__rail"></span>
+    <span class="depth-gauge__tick is-major" style="top: 8%;"><span class="depth-gauge__num">0000</span></span>
+    <span class="depth-gauge__tick" style="top: 18.5%;"></span>
+    <span class="depth-gauge__tick is-major" style="top: 29%;"><span class="depth-gauge__num">0900</span></span>
+    <span class="depth-gauge__tick" style="top: 39.5%;"></span>
+    <span class="depth-gauge__tick is-major" style="top: 50%;"><span class="depth-gauge__num">1800</span></span>
+    <span class="depth-gauge__tick" style="top: 60.5%;"></span>
+    <span class="depth-gauge__tick is-major" style="top: 71%;"><span class="depth-gauge__num">2700</span></span>
+    <span class="depth-gauge__tick" style="top: 81.5%;"></span>
+    <span class="depth-gauge__tick is-major" style="top: 92%;"><span class="depth-gauge__num">3600</span></span>
+    <span class="depth-gauge__drop" id="depthDrop" style="top: 8%;"></span>
+    <span class="depth-gauge__read" id="depthRead">−0000 M</span>
+    <span class="depth-gauge__cap is-top">SURFACE</span>
+    <span class="depth-gauge__cap is-bottom">ABYSS</span>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="EXCO GEOVISTA home">
+      <img src="/media/exco-geovista-logo.png" alt="EXCO GEOVISTA" />
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#about">About</a><a href="#solutions">Solutions</a><a href="#technology">Technology</a><a href="#geology-cube">3D Cube</a><a href="#industries">Industries</a><a href="#workflow">Workflow</a>
+    </nav>
+    <a class="header-cta" href="#contact">Get in touch <span>→</span></a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about">About</a><a href="#solutions">Solutions</a><a href="#technology">Technology</a><a href="#geology-cube">3D Cube</a><a href="#industries">Industries</a><a href="#workflow">Workflow</a><a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-bg" src="/media/hero.webp" alt="Survey drone flying over an open-pit mine with terrain analysis overlay" />
+      <div class="hero-overlay"></div><div class="hero-grid"></div>
+      <div class="container hero-content">
+        <p class="eyebrow eyebrow-light">Drone-based survey solutions</p>
+        <h1 id="hero-title">A higher perspective for a <span>deeper understanding.</span></h1>
+        <p class="hero-copy">Advanced aerial surveying for mining operations and geological projects — turning complex terrain into clear, actionable geospatial intelligence.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#solutions">Explore solutions <b>→</b></a><a class="btn btn-ghost" href="#technology">See our approach</a></div>
+      </div>
+      <div class="hero-capabilities"><div class="container capabilities-grid">
+        <div><span class="cap-icon">◎</span><span><b>High-resolution</b> aerial capture</span></div>
+        <div><span class="cap-icon">◇</span><span><b>3D terrain</b> & surface models</span></div>
+        <div><span class="cap-icon">△</span><span><b>Geological</b> site intelligence</span></div>
+        <div><span class="cap-icon">✓</span><span><b>Safer</b> remote fieldwork</span></div>
+      </div></div>
+    </section>
+
+    <section class="intro section" id="about">
+      <div class="container intro-grid">
+        <div class="intro-media"><img src="/media/field-operations.webp" alt="Survey professional using a tablet while a drone maps an open-pit mine" loading="lazy" /><div class="media-badge"><span>01</span><p>Field capture<br/>to spatial insight</p></div></div>
+        <div class="intro-copy">
+          <p class="eyebrow">About EXCO GEOVISTA</p><h2>From the sky to <span>decision-ready data.</span></h2>
+          <p class="lead">EXCO GEOVISTA combines drone platforms, high-resolution sensors and geospatial analysis to support mining, quarrying and geological survey teams across challenging terrain.</p>
+          <p>Our focus is simple: capture more site context with less field exposure, transform it into practical mapping deliverables, and make complex ground conditions easier to understand.</p>
+          <div class="mini-metrics"><div><strong>Faster</strong><span>site coverage</span></div><div><strong>Safer</strong><span>remote capture</span></div><div><strong>Clearer</strong><span>spatial decisions</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solutions section section-soft" id="solutions">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Our solutions</p><h2>Geospatial services built for <span>real field conditions.</span></h2></div><p>Flexible survey workflows for active mines, exploration programs, quarries and earthworks — from capture through analysis and delivery.</p></div>
+        <div class="solution-grid">
+          <article class="solution-card"><div class="solution-image"><img src="/media/highwall-scan.webp" alt="Drone mapping a mine highwall" loading="lazy"/><span class="card-number">01</span></div><div class="solution-body"><span class="icon-box">⌖</span><h3>Aerial Mapping & Orthomosaics</h3><p>High-resolution site imagery for accurate basemaps, planning, documentation and change detection.</p></div></article>
+          <article class="solution-card"><div class="solution-image"><img src="/media/digital-twin.webp" alt="3D mine model shown on field computers" loading="lazy"/><span class="card-number">02</span></div><div class="solution-body"><span class="icon-box">◇</span><h3>3D Terrain & Surface Models</h3><p>Dense point clouds, digital terrain models and realistic 3D surfaces built for engineering and geological workflows.</p></div></article>
+          <article class="solution-card"><div class="solution-image"><img src="/media/geology-scan.webp" alt="Geologists surveying layered terrain with drone mapping" loading="lazy"/><span class="card-number">03</span></div><div class="solution-body"><span class="icon-box">△</span><h3>Geological Mapping</h3><p>Capture visible structures, outcrops and terrain context to support geological interpretation and exploration planning.</p></div></article>
+          <article class="solution-card"><div class="solution-image"><img src="/media/stockpile-volumetrics.webp" alt="Drone surveying stockpiles for volume analysis" loading="lazy"/><span class="card-number">04</span></div><div class="solution-body"><span class="icon-box">▱</span><h3>Stockpile & Volume Analysis</h3><p>Repeatable aerial capture for stockpile inventories, material movement and cut/fill analysis across active operations.</p></div></article>
+          <article class="solution-card"><div class="solution-image"><img src="/media/highwall-scan.webp" alt="Highwall terrain scan visualization" loading="lazy"/><span class="card-number">05</span></div><div class="solution-body"><span class="icon-box">▥</span><h3>Highwall & Slope Survey</h3><p>Remote data capture for exposed faces and difficult terrain, reducing the need to place teams in high-risk areas.</p></div></article>
+          <article class="solution-card"><div class="solution-image"><img src="/media/field-operations.webp" alt="Drone survey field operations" loading="lazy"/><span class="card-number">06</span></div><div class="solution-body"><span class="icon-box">◷</span><h3>Progress & Change Monitoring</h3><p>Create consistent visual records of pits, roads, benches and work areas to compare conditions over time.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature section" id="technology">
+      <div class="container feature-grid">
+        <div class="feature-copy"><p class="eyebrow">Survey intelligence</p><h2>See the site as a <span>measurable digital surface.</span></h2><p class="lead">Drone imagery becomes far more valuable when it is converted into spatial products your technical teams can inspect, compare and use.</p>
+          <div class="output-tags"><span>Orthomosaics</span><span>Point clouds</span><span>3D meshes</span><span>DTM / DSM</span><span>Contours</span><span>Volumetrics</span><span>Site imagery</span><span>GIS-ready exports</span></div>
+          <a class="text-link" href="#contact">Discuss your required deliverables <b>→</b></a>
+        </div>
+        <div class="feature-media"><img src="/media/digital-twin.webp" alt="Field workstation displaying mine 3D models and elevation analysis" loading="lazy"/><div class="feature-floating-card"><span class="pulse-dot"></span><div><b>Capture → Process → Analyze</b><small>A connected survey workflow</small></div></div></div>
+      </div>
+    </section>
+
+    <!-- 3D CUBE SECTION: Interactive 3D Geological Strata & Volumetric Inspection -->
+    <section class="cube-section" id="geology-cube" aria-label="3D Geological Terrain Model">
+      <div class="cube-section__sticky">
+        <div class="cube-stage" id="cubeStage" title="Click and drag to spin 3D cube">
+          <!-- Hovering Survey Drone -->
+          <div class="drone-scanner-rig" aria-hidden="true">
+            <div class="drone-wrapper">
+              <img src="/media/survey-drone-vtol.png" alt="Survey VTOL Drone Hovering Over Geological Cube" class="drone-img" />
+            </div>
+          </div>
+
+          <div class="cube-scene" id="cubeScene">
+            <div class="cube" id="geologyCube">
+              <div class="cube__face cube__face--front">
+                <img src="/media/cube-face-1.png" alt="Geological Elevation Strata Face 1" />
+              </div>
+              <div class="cube__face cube__face--back">
+                <img src="/media/cube-face-2.png" alt="Geological Elevation Strata Face 2" />
+              </div>
+              <div class="cube__face cube__face--right">
+                <img src="/media/cube-face-3.png" alt="Geological Elevation Strata Face 3" />
+              </div>
+              <div class="cube__face cube__face--left">
+                <img src="/media/cube-face-4.png" alt="Geological Elevation Strata Face 4" />
+              </div>
+              <div class="cube__face cube__face--top">
+                <img src="/media/cube-face-5.png" alt="Geological Elevation Strata Face 5" />
+              </div>
+              <div class="cube__face cube__face--bottom">
+                <img src="/media/cube-face-6.png" alt="Geological Elevation Strata Face 6" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cube-controls-bar">
+          <div class="cube-actions">
+            <button type="button" class="cube-btn" id="cubeResetBtn" aria-label="Reset orientation">Reset View ↺</button>
+            <button type="button" class="cube-btn" id="cubeAutoSpinBtn" aria-label="Toggle auto spin">Auto Spin ⏵</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="applications section" id="industries">
+      <div class="container"><div class="section-heading compact"><div><p class="eyebrow">Mining & geology applications</p><h2>Built around the way <span>technical teams work.</span></h2></div></div>
+        <div class="applications-grid">
+          <article class="application large"><img src="/media/highwall-scan.webp" alt="Drone scanning a mine highwall with a 3D mesh overlay" loading="lazy"/><div class="application-overlay"><span>Highwall & slope mapping</span><p>Capture detailed exposed faces and terrain from a safer distance.</p></div></article>
+          <article class="application"><img src="/media/stockpile-volumetrics.webp" alt="Drone scanning stockpiles for volume calculation" loading="lazy"/><div class="application-overlay"><span>Stockpile intelligence</span><p>Support inventory, reconciliation and material tracking.</p></div></article>
+          <article class="application"><img src="/media/geology-scan.webp" alt="Geologists and drone mapping layered rock terrain" loading="lazy"/><div class="application-overlay"><span>Geological context</span><p>Document structural and surface relationships across broad areas.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow section section-dark" id="workflow">
+      <div class="container"><p class="eyebrow eyebrow-light">How we work</p><div class="workflow-heading"><h2>From mission planning to <span>usable outputs.</span></h2><p>A practical end-to-end process designed for repeatability, traceability and clear handoff to engineering, geology and operations teams.</p></div>
+        <div class="workflow-grid">
+          <div class="workflow-step"><div class="step-top"><span>01</span><b>◎</b></div><h3>Plan</h3><p>Define the site, objective, required outputs and capture strategy.</p></div>
+          <div class="workflow-step"><div class="step-top"><span>02</span><b>⌖</b></div><h3>Capture</h3><p>Collect consistent aerial data over the operational or geological area.</p></div>
+          <div class="workflow-step"><div class="step-top"><span>03</span><b>◇</b></div><h3>Process</h3><p>Build maps, models and geospatial datasets from the captured imagery.</p></div>
+          <div class="workflow-step"><div class="step-top"><span>04</span><b>▥</b></div><h3>Deliver</h3><p>Package the outputs for review, measurement, reporting and downstream use.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits section">
+      <div class="container benefits-grid"><div class="benefits-copy"><p class="eyebrow">Operational value</p><h2>More context. <span>Less exposure.</span></h2><p class="lead">Aerial capture complements conventional survey and geological workflows by making large, steep or changing sites easier to observe and document.</p></div>
+        <div class="benefit-list">
+          <div><span class="benefit-icon">◷</span><div><h3>Cover more ground</h3><p>Capture broad areas efficiently and revisit them using repeatable flight plans.</p></div></div>
+          <div><span class="benefit-icon">✓</span><div><h3>Reduce field exposure</h3><p>Collect visual and spatial information from areas that are difficult or undesirable to access on foot.</p></div></div>
+          <div><span class="benefit-icon">▥</span><div><h3>Make change visible</h3><p>Compare surveys over time to support progress tracking, planning and operational review.</p></div></div>
+          <div><span class="benefit-icon">↗</span><div><h3>Smarter field deployment</h3><p>Focus specialist fieldwork where it adds the most value, informed by a wider aerial view of the site.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact-grid"><div class="contact-copy"><p class="eyebrow eyebrow-light">Start a project</p><h2>Tell us what you need to <span>survey, map or measure.</span></h2><p>Share the location, approximate area and the outputs you need. We can structure the mission around your operational or geological objective.</p><div class="contact-points"><span>Mining operations</span><span>Quarries & aggregates</span><span>Geological surveys</span><span>Exploration support</span></div></div>
+        <form class="contact-form" id="contactForm"><label>Name<input required name="name" placeholder="Your name"/></label><label>Company<input name="company" placeholder="Company / organization"/></label><label>Email<input required type="email" name="email" placeholder="name@company.com"/></label><label>Project type<select name="project"><option>Mining survey</option><option>Geological survey</option><option>Stockpile / volumetrics</option><option>Highwall / slope mapping</option><option>3D modelling</option><option>Other</option></select></label><label class="full">Project details<textarea name="details" rows="4" placeholder="Location, approximate area, required deliverables..."></textarea></label><button class="btn btn-primary full" type="submit">Request consultation <b>→</b></button><p class="form-note full" id="formNote" hidden>Form design is ready. Connect this form to your preferred email, CRM or backend endpoint before launch.</p></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><img src="/media/exco-geovista-logo.png" alt="EXCO GEOVISTA"/><p>Drone-based survey solutions for mining operations and geological surveys.</p></div><div><b>Navigate</b><a href="#about">About</a><a href="#solutions">Solutions</a><a href="#technology">Technology</a><a href="#contact">Contact</a></div><div><b>Capabilities</b><span>Aerial mapping</span><span>3D modelling</span><span>Geological mapping</span><span>Volumetric analysis</span></div></div><div class="container footer-bottom"><span>© 2026 EXCO GEOVISTA</span><span>Geospatial intelligence from above.</span></div></footer>
+  <script src="/site.js" defer></script>
+</body>
+</html>
