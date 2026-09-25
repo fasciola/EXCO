@@ -121,8 +121,8 @@
   background: #ffffff !important;
   color: #111111 !important;
   overflow: visible;
-  border-top: 1px solid #ECEAF1;
-  border-bottom: 1px solid #ECEAF1;
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .cube-section__sticky {
@@ -345,4 +345,663 @@
     gap: 12px;
   }
 }
+
+/* ---------- Redesigned "From the Sky to Real Results" Section ---------- */
+.gis-results-container {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.gis-results-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.gis-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-size: 13px;
+  font-weight: 850;
+  color: #E67E00;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+.gis-title {
+  font-size: clamp(38px, 4.3vw, 56px);
+  font-weight: 850;
+  color: #111111;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin-bottom: 20px;
+}
+
+.gis-lead {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #444444;
+  max-width: 520px;
+  margin-bottom: 34px;
+}
+
+.gis-metrics-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.gis-metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.gis-metric-val {
+  font-size: 26px;
+  font-weight: 850;
+  color: #F5A623;
+  line-height: 1.1;
+}
+
+.gis-metric-lbl {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3d3d3d;
+  white-space: nowrap;
+}
+
+.gis-metric-divider {
+  width: 2px;
+  height: 38px;
+  background: #F5A623;
+  opacity: 0.85;
+  border-radius: 1px;
+}
+
+/* Right display rig: 3 stacked cards + main panoramic composite card */
+.gis-display-rig {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.gis-thumb-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 110px;
+  flex-shrink: 0;
+}
+
+.gis-thumb-card {
+  height: calc((100% - 20px) / 3);
+  min-height: 86px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #111;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.gis-thumb-card:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(245, 166, 35, 0.25);
+  border-color: rgba(245, 166, 35, 0.45);
+}
+
+.gis-thumb-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gis-main-card {
+  position: relative;
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0B0E14;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+}
+
+.gis-main-image {
+  width: 100%;
+  height: 100%;
+  min-height: 290px;
+  max-height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.gis-layers-panel {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+  width: 130px;
+  background: rgba(14, 18, 26, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  z-index: 5;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.gis-layer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: all 0.18s ease;
+  user-select: none;
+}
+
+.gis-layer-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.gis-layer-item:active {
+  transform: scale(0.97);
+}
+
+.gis-layer-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gis-checkbox {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #F5A623;
+  color: #111;
+  font-size: 10px;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.gis-layer-item:not(.is-active) .gis-checkbox {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: transparent;
+}
+
+.gis-layer-item:not(.is-active) {
+  opacity: 0.55;
+}
+
+.gis-layer-name {
+  font-size: 10px;
+  font-weight: 700;
+  color: #F1F1F1;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.gis-layer-preview {
+  height: 32px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #000;
+}
+
+.gis-layer-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .gis-results-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gis-display-rig {
+    flex-direction: column;
+  }
+  .gis-thumb-stack {
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+  }
+  .gis-thumb-card {
+    height: 100%;
+    flex: 1;
+  }
+  .gis-layers-panel {
+    position: static;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10px;
+  }
+}
+
+/* ---------- Hero Slider Transitions & Controls ---------- */
+.hero {
+  position: relative;
+  height: min(940px, 100svh);
+  min-height: 760px;
+  overflow: hidden;
+  background: #111;
+  color: #fff;
+}
+
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.035);
+  z-index: 1;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.hero-slide .hero-anim-1,
+.hero-slide .hero-anim-2,
+.hero-slide .hero-anim-3,
+.hero-slide .hero-anim-4 {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-slide.is-active .hero-anim-1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.15s;
+}
+
+.hero-slide.is-active .hero-anim-2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.28s;
+}
+
+.hero-slide.is-active .hero-anim-3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.hero-slide.is-active .hero-anim-4 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.52s;
+}
+
+.hero-controls {
+  position: absolute;
+  bottom: 95px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.hero-dots {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero-dot {
+  position: relative;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-dot:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.hero-dot.is-active {
+  background: var(--amber);
+  color: #111;
+  border-color: var(--amber);
+  box-shadow: 0 4px 18px rgba(245, 166, 35, 0.4);
+}
+
+.hero-arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.hero-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.hero-arrow:hover {
+  background: var(--amber);
+  color: #111;
+  border-color: var(--amber);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.hero-arrow:active {
+  transform: scale(0.95);
+}
+
+.play-icon {
+  font-size: 10px;
+  margin-right: 4px;
+  color: var(--amber);
+}
+
+/* ---------- Scroll-Triggered Reveal Effects (GSAP / WOW style) ---------- */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade-up"] {
+  transform: translateY(32px);
+}
+
+[data-reveal="fade-left"] {
+  transform: translateX(36px);
+}
+
+[data-reveal="fade-right"] {
+  transform: translateX(-36px);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-delay: calc(var(--stagger, 0) * 85ms);
+}
+
+/* ---------- Solution Filter Tabs ---------- */
+.solution-tabs {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 38px;
+  flex-wrap: wrap;
+}
+
+.solution-tab {
+  background: #ffffff;
+  border: 1px solid #E4E2EB;
+  color: #4A4A4A;
+  font-size: 13px;
+  font-weight: 750;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  user-select: none;
+}
+
+.solution-tab:hover {
+  background: #F7F5FA;
+  color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.solution-tab.is-active {
+  background: var(--amber);
+  color: #111111;
+  border-color: var(--amber);
+  box-shadow: 0 4px 18px rgba(245, 166, 35, 0.35);
+  transform: translateY(-1px);
+}
+
+.solution-tab:active {
+  transform: scale(0.97);
+}
+
+.solution-card.is-filtered-out {
+  display: none !important;
+}
+
+/* ---------- Service Card High-Taste Motion ---------- */
+.solution-card {
+  position: relative;
+  border-bottom: 3px solid var(--amber) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 26px 54px rgba(54, 45, 74, 0.16);
+}
+
+.solution-card:hover .icon-box {
+  transform: scale(1.12) rotate(-4deg);
+  background: var(--amber);
+  color: #111;
+  box-shadow: 0 8px 20px rgba(245, 166, 35, 0.35);
+}
+
+.solution-card:active {
+  transform: translateY(-3px) scale(0.985);
+}
+
+/* ---------- Video Modal Lightbox ---------- */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.video-modal[hidden] {
+  display: none;
+}
+
+.video-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 10, 16, 0.84);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.video-modal-container {
+  position: relative;
+  z-index: 2;
+  width: min(920px, 92vw);
+  background: #0D0E14;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  animation: modalPopIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPopIn {
+  0% { transform: scale(0.94) translateY(18px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.video-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.video-modal-close:hover {
+  background: var(--amber);
+  color: #111;
+  transform: rotate(90deg) scale(1.08);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background: #000;
+}
+
+.video-element {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-modal-caption {
+  padding: 16px 22px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  background: rgba(18, 22, 32, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.video-modal-caption strong {
+  color: var(--amber);
+}
+
+/* ---------- Floating Back-to-Top Button ---------- */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 76px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #111111;
+  color: var(--amber);
+  border: 1.5px solid rgba(245, 166, 35, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 9990;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, border-color 0.2s ease;
+}
+
+.back-to-top-btn.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.back-to-top-btn:hover {
+  background: var(--amber);
+  color: #111111;
+  border-color: var(--amber);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 14px 34px rgba(245, 166, 35, 0.45);
+}
+
+.back-to-top-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 720px) {
+  .hero-controls {
+    bottom: 145px;
+  }
+  .hero-dot-label {
+    display: none;
+  }
+  .back-to-top-btn {
+    right: 20px;
+    bottom: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+}
+
 
